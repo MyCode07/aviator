@@ -1,0 +1,107 @@
+@@include('./html/head.html', {
+"title":"Demo",
+})
+
+@@include('./html/header.html')
+
+<main>
+    <section class="hero hero-demo">
+        <picture>
+            <source srcset="img/demo-hero.png" media="(min-width: 769px)">
+            <source srcset="img/demo-hero-mb.png" media="(max-width: 768px)">
+            <img class="bgc" src="img/demo-hero-mb.png" alt="">
+        </picture>
+        <div class="hero__container _container">
+            <div class="hero__body">
+                <h1><span>Astronaut Demo:</span> Play the Game Online for Free</h1>
+
+                <div class="hero-demo__frame">
+                    <img src="img/demo-frame.png" alt="">
+                    <div class="hero__btns">
+                        <a href="" class="_button _button-gradient">Play Demo</a>
+                        <a href="" class="_button">Play for money</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('html/breadcrumbs.html',{})
+
+    @@include('html/details.html',{})
+
+
+    <section class="section strategies strategies-demo" data-tabs-area>
+        <div class="rocket">
+            <img src="img/rocket.png" alt="">
+        </div>
+        <div class="rocket rocket-bottom">
+            <img src="img/rocket-bottom.png" alt="">
+        </div>
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__title">
+                    <h2>The Top Sites to Play <br> Astronaut Demo</h2>
+                    <p>Aviator Game is available on several licensed online gaming platforms that comply with regional
+                        laws and regulations.
+                        These platforms offer features such as multiple deposit methods, mobile compatibility, and
+                        user-friendly interfaces
+                        suitable.</p>
+                </div>
+                <div class="tabs grid grid-2">
+                    <div class="tabs-btns">
+                        <button data-tab="0" class="_button _button-red _active">Single Bet</button>
+                        <button data-tab="1" class="_button">2:1</button>
+                        <button data-tab="2" class="_button">Martingale</button>
+                        <button data-tab="3" class="_button">Paroli</button>
+                    </div>
+                    <div class="tabs-contnet">
+                        <div data-tab-content="0" class="_active">
+                            <div class="_text-box">
+                                <div>
+                                    <h3>Parimatch</h3>
+                                    <p>This one is among the top brands that provide the Aviator game free to users from
+                                        India to our mind. <a href="">Parimatch</a> is known
+                                        for first-class services and a secure environment as the site and the app
+                                        implement SSL encryption both on the site and
+                                        app. The company is regulated by the government of Curacao. Some other key
+                                        features include:</p>
+                                    <ul>
+                                        <li>The site allows users to run the full-fledged demo Aviator game with non-real funds;</li>
+                                        <li>All new gamblers from India can claim an INR 105,000 welcome bonus;</li>
+                                        <li>Gamblers can ask any questions to the support service 24/7 in Hindi.</li>
+                                        <li>The application for iOS and Android boasts full functionality and a friendly interface;</li>
+                                    </ul>
+                                   <a href="" class="_button _button-gradient">Play at Parimatch</a>
+                                </div>
+                                <div class="image">
+                                    <img src="img/demo-play/pari.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div data-tab-content="1">
+                            <div class="_text-box">
+                                <h3>2:1</h3>
+                            </div>
+                        </div>
+                        <div data-tab-content="2">
+                            <div class="_text-box">
+                                <h3>Martingale</h3>
+                            </div>
+                        </div>
+                        <div data-tab-content="3">
+                            <div class="_text-box">
+                                <h3>Paroli</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+@@include('./html/footer.html')
+
+@@include('./html/scripts.html')

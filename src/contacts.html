@@ -1,0 +1,87 @@
+@@include('./html/head.html', {
+"title":"Contacts",
+})
+@@include('html/header.html')
+
+<main>
+
+    <section class="section contacts">
+        <div class="rocket">
+            <img src="img/rocket.png" alt="">
+        </div>
+        <div class="rocket rocket-bottom">
+            <img src="img/rocket-bottom.png" alt="">
+        </div>
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__title">
+                    <h1>Contact Us</h1>
+                    <p>Any question or remarks? Just write us a message!</p>
+                </div>
+
+                <div class="grid grid-2">
+                    <div class="contacts-info">
+                        <h2>Contact Information</h2>
+                        <p>Say something to start a live chat!</p>
+                        <ul>
+                            <li>
+                                <a href="" target="_blank">
+                                    <img src="img/icons/phone.svg" alt="">
+                                    <span>+1012 3456 789</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank">
+                                    <img src="img/icons/email.svg" alt="">
+                                    <span>demo@gmail.com</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank">
+                                    <img src="img/icons/loc.svg" alt="">
+                                    <span>132 Dartmouth Street Boston, Massachusetts 02156 United States</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="image">
+                            <img src="img/contacts.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="form">
+                        <form action="#">
+                            <div class="form-row">
+                                <div class="form-item">
+                                    <label>First Name</label>
+                                    <input type="text">
+                                </div>
+                                <div class="form-item">
+                                    <label>Last Name</label>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-item">
+                                    <label>Email</label>
+                                    <input type="email">
+                                </div>
+                                <div class="form-item">
+                                    <label>Phone Number</label>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="form-item form-text">
+                                <label>Message</label>
+                                <input type="text" placeholder="Write your message..">
+                            </div>
+                            <button class="_button _button-gradient">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+@@include('html/footer.html')
+@@include('html/scripts.html')

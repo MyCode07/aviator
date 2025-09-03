@@ -1,0 +1,202 @@
+.header {
+    background-size: cover;
+    background-color: $white;
+    position: sticky;
+    top: 0;
+    z-index: 15;
+
+    // .header__container
+
+    &__container {}
+
+    // .header__body
+
+    &__body {
+        padding: 23px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+
+        @media (max-width: 768px) {
+            padding: 24px 0;
+        }
+    }
+
+    nav {
+        width: fit-content;
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+
+            font-weight: 700;
+            line-height: normal;
+            text-transform: capitalize;
+
+            li {
+                @include underline;
+                position: relative;
+
+                &:has(button) {
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                }
+
+                &[data-open] {
+                    @include openMenuList;
+                }
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        @include openMenuList;
+                    }
+                }
+
+
+                button {
+                    width: 15px;
+                    height: 15px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    flex: 0 0 auto;
+
+                    img,
+                    svg {
+                        width: 10px;
+                        height: 6px;
+                        pointer-events: none;
+                        transition: all 0.3s ease 0s;
+                    }
+                }
+            }
+
+            li:has(ul) {
+                @media (any-hover: hover) {
+                    &:hover {
+                        @include dropdownMenu;
+                    }
+                }
+
+                &[data-open] {
+                    @include dropdownMenu;
+                }
+
+
+                ul {
+                    position: absolute;
+                    top: 100%;
+                    padding: 20px;
+                    z-index: 3;
+
+                    width: 220px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 12px;
+
+
+                    text-align: left;
+
+                    border-radius: 10px;
+                    background-color: $white;
+                    box-shadow: 0 4px 8px 0 rgba($color: $black, $alpha: 0.1);
+
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: opacity 0.3s ease 0s;
+                }
+            }
+        }
+
+        @media (max-width:768px) {
+            display: none;
+        }
+    }
+
+
+    // .header__logo
+
+    &__logo {
+        display: block;
+        width: fit-content;
+
+
+        picture,
+        img,
+        svg {
+            width: 127px;
+            height: 33px;
+
+
+            @media (max-width:768px) {
+                width: 100px;
+                height: 26px;
+            }
+        }
+    }
+
+    // .header__burger
+
+    &__burger {
+        @media (min-width:769px) {
+            display: none;
+        }
+
+        width: 22px;
+        height: 22px;
+        position: relative;
+
+        span {
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform: translate(0, -50%);
+
+            width: 100%;
+            height: 2px;
+            background-color: $black;
+            border-radius: 2px 0 0 2px;
+
+            transition: all 0.3s ease 0s;
+
+
+            &:first-child {
+                top: 4px;
+            }
+
+            &:nth-child(2) {
+                top: 50%;
+            }
+
+            &:nth-child(3) {
+                top: calc(100% - 4px);
+                width: 50%;
+            }
+        }
+
+        &._active span {
+            &:first-child {
+                width: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+            }
+
+            &:nth-child(3) {
+                width: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+        }
+    }
+}

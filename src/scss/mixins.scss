@@ -1,0 +1,124 @@
+$maxWidth: 1920;
+$maxWidthContainer: $containerWithPadding;
+$mobileWidth: 320;
+
+@mixin adaptive-value($property, $startSize, $minSize, $type) {
+    $addSize: $startSize - $minSize;
+
+    @if $type==1 {
+        //Только если меньше контейнера
+        #{$property}: $startSize + px;
+
+        @media (max-width: #{$maxWidthContainer + px}) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$mobileWidth + px}) / #{$maxWidthContainer - $mobileWidth}));
+        }
+
+        @media (max-width: #{$mobileWidth + px}) {
+            #{$property}: $minSize + px;
+        }
+    }
+
+    @else if $type==2 {
+        //Только если больше контейнера
+        #{$property}: $startSize + px;
+
+        @media (min-width: #{$maxWidthContainer + px}) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$mobileWidth + px}) / #{$maxWidth - $mobileWidth}));
+        }
+    }
+
+    @else {
+        //Всегда
+        #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$mobileWidth + px}) / #{$maxWidth - $mobileWidth}));
+    }
+}
+
+@mixin openMenuList {
+    button {
+
+        img,
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+@mixin underline {
+    position: relative;
+    padding-bottom: 8px;
+
+    &:after {
+        position: absolute;
+        content: '';
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(180deg, #E90338 0%, #AF0028 100%);
+        max-width: 0;
+        transition: max-width 0.3s ease 0s;
+        pointer-events: none;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            &:after {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@mixin container {
+    width: 100%;
+    margin-inline: auto;
+    max-width: 982px;
+
+    @media (max-width: 1024px) {
+        padding-inline: 30px;
+    }
+
+    @media (max-width: 768px) {
+        padding-inline: 16px;
+    }
+}
+
+@mixin gradientBorder {
+    border-radius: 8px;
+    position: relative;
+    background: $white;
+    box-shadow: 0 3.664px 7.329px 0 rgba(0, 0, 0, 0.06),
+        0 0 0.916px 0 rgba(0, 0, 0, 0.06);
+
+    &:before {
+        position: absolute;
+        content: '';
+        inset: -2px;
+        z-index: -1;
+        border-radius: 10px;
+        background: linear-gradient(rgba($color: #E90338, $alpha: 0.55),
+                rgba($color: #AF0003, $alpha: 0.03));
+    }
+}
+
+@mixin gradientBordeImage {
+    border-radius: 8px;
+    position: relative;
+    height: fit-content;
+
+    &:before {
+        position: absolute;
+        content: '';
+        inset: -2px;
+        z-index: -1;
+        border-radius: 10px;
+        background: linear-gradient(180deg, #E90338 0%, #85020A 100%);
+    }
+}
+
+@mixin dropdownMenu {
+    & > ul {
+        opacity: 1;
+        pointer-events: all;
+    }
+}

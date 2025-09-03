@@ -1,0 +1,123 @@
+.footer {
+    position: relative;
+
+    margin-top: 100px;
+    padding-top: 40px;
+    padding-bottom: 80px;
+
+
+
+    @media (max-width: 768px) {
+        padding-top: 30px;
+        padding-bottom: 88px;
+    }
+
+    .bgc {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+        width: 100%;
+        height: calc(100% - 1px);
+        object-fit: cover;
+    }
+
+    // .footer__container
+
+    &__container {}
+
+    // .footer__body
+
+    &__body {
+        position: relative;
+        z-index: 1;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+
+        @media (max-width: 768px) {
+            gap: 30px;
+        }
+    }
+
+    // .footer__logo
+
+    &__logo {
+
+        svg,
+        picture,
+        img {
+            width: 88px;
+            height: 77px;
+            object-fit: contain;
+
+            @media (max-width: 768px) {
+                width: 60px;
+                height: 53px;
+            }
+        }
+    }
+
+    // .footer__center
+
+    &__images {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+
+        @media (max-width: 768px) {
+            gap: 20px;
+        }
+
+        img,
+        picture,
+        svg {
+            width: fit-content;
+            height: 34px;
+            object-fit: contain;
+
+            @media (max-width: 768px) {
+                height: 27px;
+            }
+        }
+    }
+
+    label {
+        color: $white;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: normal;
+        opacity: 0.5;
+
+        @media (max-width: 768px) {
+            font-size: 12px;
+        }
+    }
+
+    nav {
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+
+            @media (max-width: 768px) {
+                gap: 20px;
+            }
+
+            li {
+                color: $white;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: normal;
+                text-transform: capitalize;
+            }
+        }
+    }
+}
