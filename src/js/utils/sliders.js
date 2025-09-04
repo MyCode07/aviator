@@ -1,16 +1,16 @@
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 
-const casinoSlider = document.querySelectorAll('.swiper');
+const betslider = document.querySelectorAll('.swiper');
 
-if (casinoSlider.length) {
-    casinoSlider.forEach(slider => {
+if (betslider.length) {
+    betslider.forEach(slider => {
         const section = slider.closest('section')
         const prev = section.querySelector('.prev')
         const next = section.querySelector('.next')
         const pagination = section.querySelector('.pagination')
 
-        if (slider.closest('.adv') && window.innerWidth <= 768) {
+        if (slider.closest('.benefit') && window.innerWidth <= 768) {
             new Swiper(slider, {
                 modules: [Navigation],
                 slidesPerView: 'auto',
@@ -22,7 +22,7 @@ if (casinoSlider.length) {
             })
         }
 
-        if (slider.closest('.play')) {
+        if (slider.closest('.game')) {
             new Swiper(slider, {
                 modules: [Pagination],
                 slidesPerView: 1,
@@ -62,7 +62,7 @@ if (casinoSlider.length) {
                     bullet.classList.remove('swiper-pagination-bullet-passed');
                 });
 
-                const activeIndex = swiperInstance.realIndex; 
+                const activeIndex = swiperInstance.realIndex;
                 for (let i = 0; i < activeIndex; i++) {
                     if (bullets[i]) {
                         bullets[i].classList.add('swiper-pagination-bullet-passed');
@@ -71,7 +71,7 @@ if (casinoSlider.length) {
             }
         }
 
-        if (slider.closest('.bonuses') && window.innerWidth <= 768) {
+        if (slider.closest('.prize') && window.innerWidth <= 768) {
             new Swiper(slider, {
                 modules: [Navigation],
                 slidesPerView: 'auto',
@@ -83,7 +83,7 @@ if (casinoSlider.length) {
             })
         }
 
-        if (slider.closest('.reviews')) {
+        if (slider.closest('.comments')) {
             new Swiper(slider, {
                 modules: [Navigation],
                 slidesPerView: 'auto',

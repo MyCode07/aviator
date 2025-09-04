@@ -1,4 +1,4 @@
-.adv-card {
+.benefit-card {
     text-align: center;
     min-height: 100%;
     padding-top: 95px;
@@ -48,7 +48,7 @@
     }
 }
 
-.casino-card {
+.bet-card {
     border-radius: 10px;
     background: $white;
     box-shadow: 0 3.664px 7.329px 0 rgba(0, 0, 0, 0.06), 0 0 0.916px 0 rgba(0, 0, 0, 0.06);
@@ -65,7 +65,7 @@
         padding: 0;
     }
 
-    // .casino-card__img
+    // .bet-card__img
     &__img {
         width: 160px;
         height: 160px;
@@ -89,7 +89,7 @@
         }
     }
 
-    // .casino-card__text
+    // .bet-card__text
     &__text {
         display: flex;
         flex-direction: column;
@@ -139,7 +139,7 @@
         }
     }
 
-    // .casino-card__btns
+    // .bet-card__btns
     .info {
         margin-top: 16px;
         padding: 8px 0;
@@ -186,7 +186,7 @@
         }
     }
 
-    // .casino-card__info
+    // .bet-card__info
     &__info {
         display: flex;
         flex-direction: column;
@@ -257,7 +257,7 @@
 
     @media (min-width:769px) {
         &:nth-child(2n) {
-            .casino-card__info {
+            .bet-card__info {
                 left: unset;
                 right: calc(100% + 20px);
                 transform: translate(50px, 0);
@@ -275,7 +275,7 @@
     }
 
     &._active {
-        .casino-card__info {
+        .bet-card__info {
             transform: translate(0, 0);
             opacity: 1;
             pointer-events: all;
@@ -283,7 +283,7 @@
     }
 }
 
-.play-card {
+.game-card {
     min-height: 100%;
     display: flex;
     gap: 50px;
@@ -298,7 +298,7 @@
         }
     }
 
-    // .play-card__img
+    // .game-card__img
     &__img {
         width: 354px;
         flex: 0 0 auto;
@@ -316,7 +316,7 @@
     }
 }
 
-.bonuses-card {
+.prize-card {
     @include gradientBorder;
     padding: 30px 20px;
 
@@ -351,7 +351,7 @@
     }
 }
 
-.review-card {
+.comment-card {
     @include gradientBorder;
     padding: 40px;
 
@@ -359,7 +359,7 @@
         padding: 30px 16px 80px 16px;
     }
 
-    // .review-card__top
+    // .comment-card__top
     &__top {
         margin-bottom: 4px;
         display: flex;
@@ -428,7 +428,7 @@
     }
 }
 
-.features-card {
+.functions-card {
     div {
         margin-bottom: 8px;
         display: flex;
@@ -466,10 +466,10 @@
     }
 }
 
-.casino-line {
+.bet-line {
     @include gradientBorder;
 
-    // .casino-line__top
+    // .bet-line__top
     &__top {
         display: flex;
         justify-content: space-between;
@@ -485,7 +485,7 @@
         }
     }
 
-    // .casino-line__img
+    // .bet-line__img
     &__img {
         display: flex;
         align-items: center;
@@ -523,7 +523,7 @@
         }
     }
 
-    // .casino-line__text
+    // .bet-line__text
     &__text {
         @media (min-width:601px) {
             display: flex;
@@ -585,7 +585,7 @@
         }
     }
 
-    // .casino-line__btns
+    // .bet-line__btns
     &__btns {
         gap: 12px;
         display: flex;
@@ -610,9 +610,9 @@
         }
     }
 
-    // .casino-line__bottom
+    // .bet-line__bottom
     &:not(._active) {
-        .casino-line__bottom {
+        .bet-line__bottom {
             div {
                 display: none;
             }

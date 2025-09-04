@@ -40,7 +40,7 @@ if (tabAreas.length) {
 document.addEventListener('click', function (e) {
     let targetEl = e.target;
 
-    if (targetEl.closest('.casino-line') && targetEl.tagName =='BUTTON') {
-        targetEl.closest('.casino-line').classList.toggle('_active')
+    if (targetEl.closest('.bet-line') && targetEl.tagName =='BUTTON') {
+        targetEl.closest('.bet-line').classList.toggle('_active')
     }
 })

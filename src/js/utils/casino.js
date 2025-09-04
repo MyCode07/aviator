@@ -4,13 +4,13 @@ document.addEventListener('click', function (e) {
 
     if (targetEl.classList.contains('info-open')) {
         if (window.innerWidth <= 768) {
-            targetEl.closest('.casino-card').classList.toggle('_active')
+            targetEl.closest('.bet-card').classList.toggle('_active')
         } else {
-            targetEl.closest('.casino-card').classList.add('_active')
+            targetEl.closest('.bet-card').classList.add('_active')
         }
     }
 
     if (targetEl.classList.contains('info-close')) {
-        targetEl.closest('.casino-card').classList.remove('_active')
+        targetEl.closest('.bet-card').classList.remove('_active')
     }
 })

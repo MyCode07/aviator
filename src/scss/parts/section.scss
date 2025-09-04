@@ -63,7 +63,7 @@
     }
 }
 
-.adv {
+.benefit {
     position: relative;
 
     .section__title {
@@ -116,7 +116,7 @@
     }
 }
 
-.features {
+.functions {
     background-color: #0E1012;
 
     .section__title {
@@ -136,10 +136,10 @@
     }
 }
 
-.play {
+.game {
     background-color: $white;
 
-    // .play-pagination
+    // .game-pagination
     &-pagination {
         margin-bottom: 40px;
         position: relative;
@@ -201,10 +201,10 @@
     }
 }
 
-.pay {
+.method {
     background-color: $white;
 
-    // .pay-table
+    // .method-table
     &-table {
         min-width: 670px;
 
@@ -242,7 +242,7 @@
     }
 }
 
-.bonuses {
+.prize {
     .section__title {
         margin-bottom: 95px;
 
@@ -376,7 +376,7 @@
     }
 }
 
-.strategies {
+.tactic {
     h2 {
         @media (max-width:570px) {
             br {
@@ -385,7 +385,7 @@
         }
     }
 
-    // .strategies-demo
+    // .tactic-demo
     &-demo {
         .grid {
             @include gradientBorder;
@@ -507,7 +507,7 @@
     }
 }
 
-.reviews {
+.comments {
     background-color: $white;
 
     @media (min-width:769px) {
@@ -532,7 +532,7 @@
         }
     }
 
-    // .reviews-bg
+    // .comments-bg
     &-bg {
         position: absolute;
         right: 0;
@@ -563,7 +563,7 @@
         }
     }
 
-    // .reviews-slider
+    // .comments-slider
     &-slider {
         width: 100%;
         min-width: 0;
@@ -599,7 +599,7 @@
     }
 }
 
-.contacts {
+.feedback {
     ._container {
         max-width: 1125px;
     }
@@ -612,7 +612,7 @@
         }
     }
 
-    // .contacts-info
+    // .feedback-info
     &-info {
         width: 43%;
         flex: 0 0 auto;
@@ -736,14 +736,14 @@
     }
 }
 
-.error {
+.notfound {
     position: relative;
 
     & + .footer {
         margin-top: 0;
     }
 
-    // .error-404
+    // .notfound-404
     &-404 {
         margin-bottom: 0;
         padding-top: 136px;
