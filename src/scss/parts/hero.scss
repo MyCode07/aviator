@@ -1,4 +1,4 @@
-.hero {
+.banner {
     position: relative;
 
     .bgc {
@@ -11,10 +11,10 @@
         object-fit: cover;
     }
 
-    // .hero__container
+    // .banner__container
     &__container {}
 
-    // .hero__body
+    // .banner__body
     &__body {
         @include adaptive-value('padding-top', 157, 60, 1);
         @include adaptive-value('padding-bottom', 229, 106, 1);
@@ -76,7 +76,7 @@
         }
     }
 
-    // .hero__btns
+    // .banner__btns
     &__btns {
         display: flex;
         align-items: center;
@@ -93,14 +93,14 @@
         }
     }
 
-    // .hero-demo
+    // .banner-demo
     &-demo {
-        .hero__body {
+        .banner__body {
             @include adaptive-value('padding-top', 94, 60, 1);
             @include adaptive-value('padding-bottom', 70, 60, 1);
         }
 
-        // .hero-demo__frame
+        // .banner-demo__frame
         &__frame {
             position: relative;
             width: 100%;
@@ -121,7 +121,7 @@
                 margin-top: 30px;
             }
 
-            .hero__btns {
+            .banner__btns {
                 margin-top: 0;
                 position: absolute;
                 left: 50%;
@@ -132,9 +132,9 @@
         }
     }
 
-    // .hero-app
+    // .banner-app
     &-app {
-        .hero__body {
+        .banner__body {
             @include adaptive-value('padding-top', 150, 60, 1);
             @include adaptive-value('padding-bottom', 237, 60, 1);
 
@@ -186,9 +186,9 @@
         }
     }
 
-    // .hero-promo
+    // .banner-promo
     &-promo {
-        .hero__body {
+        .banner__body {
             @include adaptive-value('padding-top', 120, 60, 1);
             @include adaptive-value('padding-bottom', 120, 60, 1);
 
@@ -209,7 +209,7 @@
             }
         }
 
-        .hero__btns {
+        .banner__btns {
             display: grid;
             grid-template-columns: 1fr 0.715fr;
             gap: 16px 12px;
@@ -247,9 +247,9 @@
         }
     }
 
-    // .hero-review
+    // .banner-review
     &-review {
-        .hero__btns {
+        .banner__btns {
             padding: 20px;
             display: flex;
             flex-direction: column;
@@ -299,7 +299,7 @@
             }
         }
 
-        // .hero-review__top
+        // .banner-review__top
         &__top {
             display: flex;
             gap: 8px;
